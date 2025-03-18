@@ -1,3 +1,4 @@
+
 # Traini8: Training Center Registry
 
 ## Project Overview
@@ -16,18 +17,39 @@ It is a Minimum Viable Product (MVP) designed to register government-funded trai
 - **Database**: MySQL 
 - **ORM**: Hibernate
 
-### Configure the Database
-1. Open `application.properties`  and configure the database connection.
+## Setup Instructions
 
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/buyogo
-spring.datasource.username=root
-spring.datasource.password=yourpassword
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+This project is a Spring Boot application that has been fully set up in Spring Tool Suite (STS). To run it, follow these steps:
 
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
-spring.jpa.hibernate.ddl-auto=update
-```
+1. **Clone the Repository**
+
+2. **Open in STS**
+   - Open Spring Tool Suite (STS).
+   - Import the project as an **Existing Maven Project**.
+   
+3. **Configure the Database**
+   - Ensure you have MySQL installed and running.
+   - Create a database manually if it does not exist:
+     ```sql
+     CREATE DATABASE buyogo;
+     ```
+   - Open `application.properties` and set up the database connection:
+     ```properties
+     spring.datasource.url=jdbc:mysql://localhost:3306/buyogo
+     spring.datasource.username=root
+     spring.datasource.password=yourpassword
+     spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+     spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+     spring.jpa.hibernate.ddl-auto=update
+     ```
+
+4. **Run the Application**
+   - Inside STS, navigate to the `Traini8Application.java` file.
+   - Run the application.
+
+5. **Test APIs**
+   - Use Postman to test the APIs.
 
 ## API Documentation
 ### 1. Create a Training Center
